@@ -1,0 +1,19 @@
+{
+  "ambientDependencies": {
+    "angular2": "github:DefinitelyTyped/DefinitelyTyped/angular2/angular2.d.ts#cdd23d1c610cc97f38bcd6e402b6da5edeea1bae",
+    "es6-shim": "github:DefinitelyTyped/DefinitelyTyped/es6-shim/es6-shim.d.ts#6697d6f7dadbf5773cb40ecda35a76027e0783b2",
+    "zone.js": "github:DefinitelyTyped/DefinitelyTyped/zone.js/zone.js.d.ts#b923a5aaf013ac84c566f27ba6b5843211981c7a"
+  },
+  "globalDependencies": {
+    "angular": "registry:dt/angular",
+    "jquery": "registry:dt/jquery",
+    "angular-resource": "registry:dt/angular-resource",
+    "angular-mocks": "registry:dt/angular-mocks",
+    "jasmine": "registry:dt/jasmine",
+    "typescript": "registry:dt/typescript",
+    "typescript": "registry:dt/typescript",
+    "core-js": "registry:dt/core-js#0.0.0+20160317120654",
+    "jasmine": "registry:dt/jasmine#2.2.0+20160505161446",
+    "node": "registry:dt/node#4.0.0+20160509154515"
+  }
+}

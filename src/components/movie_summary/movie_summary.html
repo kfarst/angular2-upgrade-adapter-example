@@ -1,0 +1,64 @@
+<div class="row movie-summary">
+  <div class="col-md-3 text-center movie-summary--poster">
+    <img [src]="movie.posters && movie.posters.original" />
+  </div>
+
+  <div class="col-md-9 movie-summary--info">
+    <h3>{{ movie.title }}</h3>
+
+    <dl *ngFor="let rating of movie.ratings | keys">
+      <dt>{{ rating.key | titleize }}</dt>
+      <dd>{{ rating.value | formatRating }}</dd>
+    </dl>
+
+    <dl>
+      <dt>Year</dt>
+      <dd>{{ movie.year }}</dd>
+    </dl>
+
+    <dl>
+      <dt>MPAA Rating</dt>
+      <dd>{{ movie.mpaa_rating }}</dd>
+    </dl>
+
+    <dl>
+      <dt>Synopsis</dt>
+      <dd>{{ movie.synopsis }}</dd>
+    </dl>
+  </div>
+</div>
+
+<div class="row push-down">
+  <div class="col-md-12">
+    <fieldset>
+      <legend>More Info</legend>
+    </fieldset>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-3">
+    <div><label>IMDB</label></div>
+    <a target="_blank" href="{{ movie.alternate_ids.imdb | imdbUrl }}">
+      {{ movie.alternate_ids.imdb | imdbUrl }}
+    </a>
+  </div>
+
+  <div class="col-md-3">
+    <div><label>Release Dates</label></div>
+    <div [ngClass]="{'push-slightly-down': !$first }" *ngFor="let date of movie.release_dates | keys">
+      <div><em>{{ date.key }}:</em></div>
+      <div>{{ date.value }}</div>
+    </div>
+  </div>
+
+  <div class="col-md-3">
+    <div><label>Runtime</label></div>
+    {{ movie | runtime }}
+  </div>
+
+  <div class="col-md-3">
+    <div><label>Abridged Cast</label></div>
+    <cast-and-characters [list]="movie.abridged_cast"></cast-and-characters>
+  </div>
+</div>

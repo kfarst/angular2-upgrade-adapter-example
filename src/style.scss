@@ -1,0 +1,70 @@
+$back-button-link-color: #3A9425;
+
+@import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+
+.nav {
+  background: url('https://d2a5cgar23scu2.cloudfront.net/static/images/logos/tomatocorner.png') no-repeat;
+  background-size: 25% auto;
+  background-color: #3A9425;
+  color: white;
+  font-size: 18px;
+  text-align: center;
+  border-radius: 0 0 10px 10px;
+
+  li {
+    padding: $grid-gutter-width/2;
+
+    a {
+      color: #fded00;
+      text-decoration: none;
+
+      &.disabled, &:hover {
+        color: white;
+      }
+    }
+  }
+}
+
+.movie-summary {
+  border-radius: 10px;
+  background-color: lightgray;
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &--info {
+    margin: 10px;
+  }
+
+  &--poster {
+    img {
+      width: auto;
+      height: 400px;
+      box-shadow: 3px 3px 20px;
+    }
+  }
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.btn-link {
+  color: $back-button-link-color;
+  font-weight: bold;
+  font-size: 18px;
+
+  &:hover {
+    color: lighten($back-button-link-color, 5%);
+  }
+}
+
+.push-down {
+  margin-top: $grid-gutter-width;
+}
+
+
+.push-slightly-down {
+  margin-top: $grid-gutter-width/3;
+}

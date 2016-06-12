@@ -1,0 +1,4 @@
+<div *ngFor="let member of list">
+  {{ member.name }}
+  <span *ngIf="member.characters.length"> - <em>{{ member.characters.join(', ') }}</em></span>
+</div>

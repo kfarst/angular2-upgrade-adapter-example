@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <base href="/">
+
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.18/angular-ui-router.js"></script>
+    <script src="https://code.angularjs.org/1.2.16/angular-resource.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.13.1/lodash.js"></script>
+    <script src="controllers.js"></script>
+    <script src="routes.js"></script>
+
+    <script src="core-js/client/shim.min.js"></script>
+    <script src="zone.js/dist/zone.js"></script>
+    <script src="reflect-metadata/Reflect.js"></script>
+    <script src="systemjs/dist/system.src.js"></script>
+
+    <script src="systemjs.config.js"></script>
+    <script src="routes.js"></script>
+
+    <script>
+      System.import('components/app');
+    </script>
+  </head>
+
+  <body>
+    <div class="container">
+      <div ui-view="nav"></div>
+      <div ui-view="content"></div>
+    </div>
+  </body>
+
+</html>
